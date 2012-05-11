@@ -271,7 +271,7 @@ sub save_options {
    $Conf->{saveconfig} = 0;
    my $d = Data::Dumper->new([$Conf]);
    $d->Purity(1)->Terse(1)->Deepcopy(1);
-   open(FD,">/usr/bin/.getnapi.conf") or die "INFO: Can't open config file\n";
+   open(FD,">/etc/getnapi.conf") or die "INFO: Can't open config file\n";
    print FD $d->Dump;
    print FD "1;\n";
    close FD;
