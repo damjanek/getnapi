@@ -280,8 +280,8 @@ sub save_options {
 #############################################################################
 ### load options from file
 sub get_options {
-   debug("open /usr/bin/.getnapi.conf");
-   open(FD,"</usr/bin/.getnapi.conf") or return undef;
+   debug("open /etc/getnapi.conf");
+   open(FD,"</etc/getnapi.conf") or return undef;
    my @conf = <FD>;
    close(FD);
    my $retconf = join('',@conf);
